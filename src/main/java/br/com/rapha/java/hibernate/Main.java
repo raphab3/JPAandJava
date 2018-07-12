@@ -3,29 +3,33 @@ package br.com.rapha.java.hibernate;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
 
 public class Main {
 
     private static EntityManagerFactory entityManagerFactory;
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
         entityManagerFactory = Persistence.createEntityManagerFactory("hibernatejpa");
 
         EntityManager em = entityManagerFactory.createEntityManager();
 
-        Lembrete lembrete = null;
+        List<Lembrete> lembretes = null;
+
 
         try {
-            lembrete = em.find(Lembrete.class, 2L);
-                } finally {
-                   em.close();
-                 }
+            lembretes = em.createQuery("from Lembrete l where l.titulo LIKE '%comprar%'").getResultList();
+        } catch (Exception e) {
+            System.out.println("LIST ALL: " + e.getMessage());
+        } finally {
+            em.close();
+        }
 
-            System.out.println(lembrete);
-          }
+        if (lembretes != null) {
+            lembretes.forEach(System.out::println);
+        }
 
 
-
-
+    }
 }
