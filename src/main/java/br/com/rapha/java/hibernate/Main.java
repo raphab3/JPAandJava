@@ -3,6 +3,7 @@ package br.com.rapha.java.hibernate;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
 
 public class Main {
 
@@ -12,24 +13,24 @@ public class Main {
 
         entityManagerFactory = Persistence.createEntityManagerFactory("hibernatejpa");
 
-        Lembrete lembrete = new Lembrete();
-        lembrete.setTitulo("Estudar");
-        lembrete.setDescricao("Java OO");
+
+        List lembretes = null;
 
         EntityManager em = entityManagerFactory.createEntityManager();
 
         try {
-            em.getTransaction().begin();
-            em.persist(lembrete);
-            em.getTransaction().commit();
+            lembretes = em.createQuery("from Lembrete").getResultList();
         } catch (Exception e) {
-            em.getTransaction().rollback();
-
-            System.out.println("INSERT: " + e.getMessage());
+            System.out.println("LIST ALL: " + e.getMessage());
         } finally {
             em.close();
         }
 
-
+        if (lembretes != null) {
+            lembretes.forEach(System.out::println);
+        }
     }
+
+
+
 }
