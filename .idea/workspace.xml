@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a98d8ee-c38e-49c5-b70b-390dbedcd7fa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/rapha/java/hibernate/Lembrete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/rapha/java/hibernate/Lembrete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/rapha/java/hibernate/Lembrete.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="Lembrete.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rapha/java/hibernate/Lembrete.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="40">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
               <folding>
                 <element signature="e#490#491#0" expanded="true" />
                 <element signature="e#515#516#0" expanded="true" />
@@ -230,12 +229,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531360526530</updated>
-      <workItem from="1531360532975" duration="837000" />
+      <workItem from="1531360532975" duration="1235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="837000" />
+    <option name="totallyTimeSpent" value="1235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -305,8 +304,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/rapha/java/hibernate/Lembrete.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="40">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
           <folding>
             <element signature="e#490#491#0" expanded="true" />
             <element signature="e#515#516#0" expanded="true" />

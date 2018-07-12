@@ -1,14 +1,18 @@
 package br.com.rapha.java.hibernate;
 
+import javax.persistence.*;
+
+@Entity
 public class Lembrete {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-
+    @Column(nullable = false)
     private String titulo;
 
-
+    @Column(nullable = false)
     private String descricao;
 
     public Lembrete() {
