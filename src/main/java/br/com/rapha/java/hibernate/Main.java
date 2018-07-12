@@ -3,7 +3,6 @@ package br.com.rapha.java.hibernate;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.util.List;
 
 public class Main {
 
@@ -15,21 +14,25 @@ public class Main {
 
         EntityManager em = entityManagerFactory.createEntityManager();
 
-        List<Lembrete> lembretes = null;
-
-
         try {
-            lembretes = em.createQuery("from Lembrete l where l.titulo LIKE '%comprar%'").getResultList();
-        } catch (Exception e) {
-            System.out.println("LIST ALL: " + e.getMessage());
-        } finally {
+            Lembrete lembrete = em.find(Lembrete.class, 1L);
+
+
+            lembrete.setDescricao("5:00h");
+            lembrete.setTitulo("Estudar PHP");
+
+            em.getTransaction().begin();
+            em.merge(lembrete);
+            em.getTransaction().commit();
+        }
+        catch (Exception e){
+            em.getTransaction().rollback();
+            System.out.println("UPDATE: " + e.getMessage());
+        }
+        finally {
             em.close();
         }
-
-        if (lembretes != null) {
-            lembretes.forEach(System.out::println);
-        }
-
-
     }
 }
+
+
